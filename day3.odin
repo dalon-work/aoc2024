@@ -244,8 +244,8 @@ day3 :: proc() {
   tokens := run(data)
   defer delete(tokens)
 
-  fmt.println("Day 3, Part 1: ", part1(tokens[:]))
-  fmt.println("Day 3, Part 2: ", part2(tokens[:]))
+  fmt.println("Day 3, Part 1:", part1(tokens[:]))
+  fmt.println("Day 3, Part 2:", part2(tokens[:]))
 
 }
 

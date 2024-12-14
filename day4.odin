@@ -17,10 +17,6 @@ mas := intrinsics.matrix_flatten(matrix[3,3]rune{
 'M', '.', 'S',
 })
 
-// 
-// 
-// 
-
 search_for_mas :: proc(map2d:[][]u8, i, j: int) -> int {
   mat : matrix[3,3]rune
 
@@ -162,6 +158,7 @@ day4 :: proc() {
   lines = lines[:len(lines)-1]
 
   map2d := make([dynamic][]u8, len(lines))
+  defer delete(map2d)
 
   for l, i in lines {
     map2d[i] = transmute([]u8) l
@@ -187,7 +184,6 @@ day4 :: proc() {
   }
 
   fmt.println("Day 4, Part 2:", part2)
-
 
 }
 
